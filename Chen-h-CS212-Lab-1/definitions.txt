@@ -1,0 +1,17 @@
+o man - stands for manual and is used to get help for how to use different commands 
+
+o pwd - stands for print working directory and it does just that by printing the full path to the current directory
+
+o mkdir - means make directory and it makes new folders or directories 
+
+o mv - stands for move and allows you to move directories or files from one place to another. can be used to rename if files are in the same directory 
+
+o cd - means change directory and allows you to move to a directory
+
+o ls - stands for list and it will print out the folders and files in the specified directory
+
+o find - finds files given parameters but is slower than locate since it searches in the real system
+
+o locate - locates files but uses previously built database which results in it being faster than find
+
+o g++ - is a compiler driver of the GNU compiler collection. g++ refers to GNU C++ compiler and compiled files will be treated as C++ files 
