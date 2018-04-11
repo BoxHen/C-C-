@@ -1,7 +1,7 @@
 #include "tstdata.h"
 #include "functions.h"
 #include <stdlib.h>
-
+int NodeNumber = 1;
 /*----------------------------------------------Functon---------------------------------------------------*/
 /*-----------------------------------------Push---------------------------------------------*/
 // adds one element, a character, to the top of the queue
@@ -141,7 +141,7 @@ int Reset(int r){
   return 0;
 }
 /*----------------------------------------Delete-------------------------------------------*/
-int Delete(Node *pointer){
+int DeleteNode(Node *pointer){
   /* base case */
    if(anchor == NULL || pointer == NULL)
      return 0;
@@ -162,6 +162,7 @@ int Delete(Node *pointer){
    free(pointer);
    tracker = anchor; // reset static pointer
    return 1;
+ }
 /*-------------------------------------InsertAfter----------------------------------------*/
 void InsertAfter(Node *pointer, char value){
    Node *Temp;
@@ -180,22 +181,47 @@ void InsertAfter(Node *pointer, char value){
      if(anchor == NULL) rear = NULL;
    }
 }
-/*-------------------------------------DeleteNode-----------------------------------------*/
-// void DeleteNode(Node * pointer){
-//  ALREADY IMPLEMENTED
-// }
 /*-------------------------------------FindValue------------------------------------------*/
-Node *FindValue(int value){
-  struct Node* current = anchor;  // Initialize current
-    while (current != NULL) // iterates through the linked list to find the value
+Node *FindValue(char value){
+  Reset(0); // Initialize current
+  if(isFull() == -1){
+    printf("List is empty");
+    return NULL;
+  }
+  else{
+    while (tracker->next != NULL) // iterates through the linked list to find the value
     {
-        if (current->item == value)
-            return current;
-        current = current->next;
+        if (tracker->item == value)
+            return tracker;
+        tracker = tracker->next;
         NodeNumber++;
     }
     return NULL; // not found
+  }
 }
-
-
+/*-----------------------------------GetNodeNumber----------------------------------------*/
+int GetNodeNumber(){
+  return NodeNumber;
+}
+/*-----------------------------------PrintForward----------------------------------------*/
+void PrintForward(){
+  char i;
+  printf("\nFront to end is: ");
+    i = Front();
+    Reset(0);
+  while(i != '\0'){
+    printf("%c", i);
+    i = GetNext(0);
+  }
+}
+/*-----------------------------------PrintReverse----------------------------------------*/
+void PrintReverse(){
+  char i;
+  printf("\nEnd to Front is: ");
+  i = Back();
+  Reset(1);
+  while(i != '\0'){
+    printf("%c ", i);
+    i = GetNext(1);
+  }
 }
