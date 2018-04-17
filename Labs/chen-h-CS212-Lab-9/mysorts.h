@@ -4,14 +4,10 @@
 
 class mysorts{
   public:
-    void Sort(int    arr[]); // insertion Sort
-    void Sort(double arr[]); // selection Sort
-    void Sort(float  arr[]); // bubble Sort
+    static void Sort(int    (&arr)[arr_size]); // insertion Sort
+    static void Sort(double (&arr)[arr_size]); // selection Sort
+    static void Sort(float  (&arr)[arr_size]); // bubble Sort
 
-  private:
-    int i, j, key, min_index;
-    double Temp_d;
-    float Temp_f;
 };
 
 #endif // mysorts_H

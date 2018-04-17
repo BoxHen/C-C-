@@ -6,7 +6,8 @@ using namespace std; // standard library
 /*==============================insertion sort================================*/
 //like a poker hand - go thru from index 0-n and comapres current to previous
 // moves current is smaller
-void mysorts::Sort(int arr[]){
+void mysorts::Sort(int (&arr)[arr_size]){
+   int i, j, key;
    cout << "The int array is:    ";
    for(i = 1; i < arr_size; i++){
       key = arr[i];
@@ -20,7 +21,9 @@ void mysorts::Sort(int arr[]){
 }
 /*==============================selection sort================================*/
 // look for smallest and put in front
-void mysorts::Sort(double arr[]){
+void mysorts::Sort(double (&arr)[arr_size]){
+    int i, j, min_index;
+    double Temp_d;
     cout << "The double array is: ";
     for(i = 0; i < arr_size-1; i++){ // -1 since we dont need to check rightmost() it will be max already)
         min_index = i; // initialize min to first index
@@ -37,7 +40,9 @@ void mysorts::Sort(double arr[]){
 }
 /*===============================bubble sort==================================*/
 // compares two at a time ex-(01)->(12)->(23)...
-void mysorts::Sort(float arr[]){
+void mysorts::Sort(float (&arr)[arr_size]){
+  int i, j;
+    float Temp_f;
     cout << "The float array is:  ";
     for(i=0; i<arr_size; i++){
         for(j=0; j<arr_size-i-1; j++){ // we do i-1 since the rightmsot is already the max - dont need to compare
