@@ -32,13 +32,13 @@ int main(){
     for(int i=0; i<arr_size; i++){
         arr_int[i]=(int)arr_double[i];
     }
-    LAB9.Sort(arr_int);
+    /*mysorts::*/LAB9.Sort(arr_int);
     for(int i=0; i<arr_size-1; i++){
         cout << arr_int[i] << ",";
     }
     cout << arr_int[arr_size-1] << endl;
     /*===============================double==================================*/
-    LAB9.Sort(arr_double);
+    /*mysorts::*/LAB9.Sort(arr_double);
     for(int i=0; i<arr_size-1; i++){
        cout << arr_double[i] << ",";
     }
@@ -47,7 +47,7 @@ int main(){
     for(int i=0; i<arr_size; i++){
         arr_float[i]=(float)arr_double[i];
     }
-    LAB9.Sort(arr_float);
+    /*mysorts::*/LAB9.Sort(arr_float);
     for(int i=0; i<arr_size-1; i++){
        cout << arr_float[i] << ",";
     }
