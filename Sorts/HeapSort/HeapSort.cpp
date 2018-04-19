@@ -1,6 +1,6 @@
 // n is size of heap
 // i is the index in arr[]
-void Heapify(int arr[], int n, int i){
+void heapify(int arr[], int n, int i){
   int largest = i; // we start at the root which is index 0 in the array
   int right = 2*i + 2;
   int left  = 2*i + 1;
@@ -12,11 +12,18 @@ void Heapify(int arr[], int n, int i){
       largest = right;
   }
   if(largest != i){
-      int Temp = arr[i];
-      arr[i] = arr[largest];
-      arr[largest] = Temp;
-
+      swap(i, largest);
       //recursively do this heapify process
-      Heapify(int arr, n, largest);
+      heapify(int arr, n, largest);
   }
+}
+
+void sort(int arr[], int n){
+
+}
+
+void swap(int swap1, int swap2){
+  int Temp = arr[swap1];
+  arr[swap1] = arr[swap2];
+  arr[swap2] = Temp;
 }

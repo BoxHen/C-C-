@@ -4,9 +4,7 @@
 
 class mysorts{
   public:
-    void Sort(int    arr[]); // insertion Sort
-    void Sort(double arr[]); // selection Sort
-    void Sort(float  arr[]); // bubble Sort
+    void Sort(int arr[]); 
 
   private:
     int i, j, key, min_index;
