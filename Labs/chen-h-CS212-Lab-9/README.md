@@ -9,14 +9,14 @@ Included files:
 	mysorts.h:   contains the prototypes for functions  
 =================================================================================
 Running the program: 
---------------------------------------------------
+
 	On linux system:
 	------------------------------------------
 	TO COMPILE: g++ -o main main.cpp mysorts.cpp
 	TO RUN:     ./main
---------------------------------------------------
+
 	on windows:
 	------------------------------------------
 	TO COMPILE: cl /EHsc main.cpp mysorts.cpp
 	TO RUN:     main
---------------------------------------------------
+
