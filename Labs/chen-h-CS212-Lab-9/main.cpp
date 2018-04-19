@@ -21,7 +21,6 @@ int main(){
     }
     inFile.close();
 
-    mysorts LAB9;
     /*===========================print original===============================*/
     cout << "the text file reads: ";
     for(int i=0; i<arr_size-1; i++){
@@ -32,13 +31,13 @@ int main(){
     for(int i=0; i<arr_size; i++){
         arr_int[i]=(int)arr_double[i];
     }
-    /*mysorts::*/LAB9.Sort(arr_int);
+    mysorts::Sort(arr_int);
     for(int i=0; i<arr_size-1; i++){
         cout << arr_int[i] << ",";
     }
     cout << arr_int[arr_size-1] << endl;
     /*===============================double==================================*/
-    /*mysorts::*/LAB9.Sort(arr_double);
+    mysorts::Sort(arr_double);
     for(int i=0; i<arr_size-1; i++){
        cout << arr_double[i] << ",";
     }
@@ -47,7 +46,7 @@ int main(){
     for(int i=0; i<arr_size; i++){
         arr_float[i]=(float)arr_double[i];
     }
-    /*mysorts::*/LAB9.Sort(arr_float);
+    mysorts::Sort(arr_float);
     for(int i=0; i<arr_size-1; i++){
        cout << arr_float[i] << ",";
     }
