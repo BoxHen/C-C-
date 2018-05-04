@@ -85,5 +85,5 @@ void evalPostFix(){
     }
     item1 = GetNextQueue2(0);
   }// end while
-  printf("\nThe answer is: %d", PopStack2());
+  printf("\nThe answer is: %d \n", PopStack2());
 }
