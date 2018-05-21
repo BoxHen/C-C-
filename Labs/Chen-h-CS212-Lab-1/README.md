@@ -3,6 +3,7 @@ Project Title: CS212 – Lab 1 – Hello World
 	Note: files are separated (see included files for summary) and no files are "unnecessary"
 =================================================================================
 Included files: 
+
 	HelloWorld.c : This contains the basic introductory hello world print  
 	PrintBinary.c: converts int (0-32) to binaary
 =================================================================================

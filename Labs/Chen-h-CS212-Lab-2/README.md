@@ -3,6 +3,7 @@ Project Title: CS212 Lab 2 – Using Arrays
 	Note: files are separated (see included files for summary) and no files are "unnecessary"
 =================================================================================
 Included files: 
+
 	LAB2.c: This contains the main() and array activities 
 =================================================================================
 Running the program: 

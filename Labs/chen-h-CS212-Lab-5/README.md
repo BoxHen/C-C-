@@ -3,6 +3,7 @@ Project Title: CS212 – Lab 5 – Implementing a stack with pointers
 	Note: files are separated (see included files for summary) and no files are "unnecessary"
 =================================================================================
 Included files: 
+
 	LAB5.c: This contains the main() 
 	tstdata.h: contains stackNode struct and anchor declaration 
 

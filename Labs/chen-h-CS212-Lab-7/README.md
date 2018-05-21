@@ -3,6 +3,7 @@ Project Title: CS212 – Lab 7 – Implementing a 2-way list
 	Note: files are separated (see included files for summary) and no files are "unnecessary"
 =================================================================================
 Included files: 
+
 	LAB7.c: This contains the main() 
 	tstdata.h: contains Node struct and tracker, anchor and rear declarations, etc 
 

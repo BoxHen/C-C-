@@ -3,6 +3,7 @@ Project Title: CS212 – Lab 9 – An example of a class with overloading
 	Note: files are separated (see included files for summary) and no files are "unnecessary"
 =================================================================================
 Included files: 
+
 	main.cpp:    This contains the main() 
 	mysorts.cpp: contains functions for the class mysorts
 

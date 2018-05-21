@@ -5,6 +5,7 @@ Project Title: CS212 – Lab 10 – infix expression calculator ***v1 allows for exp
 	Note: files are separated (see included files for summary) and no files are "unnecessary"
 =================================================================================
 Included files: (I used 2 queues and 2 stacks)
+
 	main.c: This contains the main() 
 	
 	Lab10Functions.c  : contains the inFixToPostFix / PostFix evaluation functions 

@@ -3,6 +3,7 @@ Project Title: CS212 – Lab 3 – Implementing a stack with an array
 	Note: files are separated (see included files for summary) and no files are "unnecessary"
 =================================================================================
 Included files: 
+
 	LAB3.c: This contains the main() 
 	tstdata.h: contains the size of the stack (currently 8)
 

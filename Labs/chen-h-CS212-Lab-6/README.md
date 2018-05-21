@@ -3,6 +3,7 @@ Project Title: CS212 – Lab 6 – Implementing a queue with pointers
 	Note: files are separated (see included files for summary) and no files are "unnecessary"
 =================================================================================
 Included files: 
+
 	LAB6.c: This contains the main() 
 	tstdata.h: contains queueNode struct and anchor and rear declarations 
 

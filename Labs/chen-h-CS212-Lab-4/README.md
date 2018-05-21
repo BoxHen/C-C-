@@ -3,6 +3,7 @@ Project Title: CS212 – Lab 4 – Implementing a queue with an array
 	Note: files are separated (see included files for summary) and no files are "unnecessary"
 =================================================================================
 Included files: 
+
 	LAB4.c: This contains the main() 
 	tstdata.h: defines queue size 
 
