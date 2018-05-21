@@ -1,7 +1,7 @@
 ***I HAVE COMPLETED THE EXTRA CREDIT - PLEASE TEST USING EXPONENT TEST***
 
 ==============================================================================
-Project Title: CS212 – Lab 10 – infix expression calculator
+Project Title: CS212 – Lab 10 – infix expression calculator ***v1 allows for exponents***
 	Note: files are separated (see included files for summary) and no files are "unnecessary"
 =================================================================================
 Included files: (I used 2 queues and 2 stacks)

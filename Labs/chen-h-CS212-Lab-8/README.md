@@ -3,6 +3,7 @@ Project Title: CS212 – Lab 8 – List Insertion and Removal
 	Note: files are separated (see included files for summary) and no files are "unnecessary"
 =================================================================================
 Included files: 
+
 	LAB8.c: This contains the main() 
 	tstdata.h: contains Node struct and tracker, anchor and rear declarations, etc 
 
