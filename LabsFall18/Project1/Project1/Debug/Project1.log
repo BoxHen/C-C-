@@ -1,0 +1,5 @@
+﻿  Source.cpp
+c:\users\henry\desktop\fall 2018\cs311\projects\project1\project1\source.cpp(20): warning C4805: '==': unsafe mix of type 'int' and type 'bool' in operation
+c:\users\henry\desktop\fall 2018\cs311\projects\project1\project1\source.cpp(42): warning C4805: '==': unsafe mix of type 'int' and type 'bool' in operation
+c:\users\henry\desktop\fall 2018\cs311\projects\project1\project1\source.cpp(29): warning C4101: 'c': unreferenced local variable
+  Project1.vcxproj -> C:\Users\Henry\Desktop\Fall 2018\CS311\Projects\Project1\Debug\Project1.exe
