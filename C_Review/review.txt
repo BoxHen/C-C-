@@ -1,0 +1,72 @@
+int main(int argc, char * argv[]) NOTE:argc and argv is  a convention and this is equally valid "int main(int num_args, char** arg_strings)". They can even be omitted if nothing is to be passed from cmd line
+	argc(argument count)  : this is a argument passed to main(). argc is the number of arguments total being passed
+	argv(argument vector) : this is a argument passed to main(). argv is the vector array to access the arguments passed 
+
+Global Variable
+	Global variables are declared outside of all functions. Global variables are stored in Data Segment[1] of process. Global variable’s life is until the life of program and it can be accessed by other 
+	files using extern keyword. For example[2] ,
+
+External Variable
+	The external variable is a global variable that will be known to the functions in a file and capable of being known to all functions in a program. This variable has a duration that is permanent. Any 
+	variable of this type retains its value until changed by another assignment. The scope is global but if the extern declaration is inside a function, only that function has access to the global variable. 
+	If it is outside of any function, then all functions in the file have access to the variable. The extern statement does not declare a variable, but just references a global variable which was declared in 
+	another file.
+
+Static Variable
+	Static variable can be declared outside of all functions or within a function using static keyword before the data type of variable. If static variables are declared outside of all functions it will have 
+	global scope or it is declared within a function it will have scope within a function and it will retain until the life of program. Static variables are initialized only once at the time of declaration 
+	only. Static variables which are global are not accessible by other files using extern keywords. Here the keyword static produces the opposite results as the extern keyword. The variable is global to 
+	the file where it is declared, but may not be referenced in any other files. Thus the keyword static can produce a form of data hiding. In other words, a variable may need to be persistent or global, but 
+	we may not want other programmers to know much about this variable - least they try to change it. A static variable declared inside a function is placed in the data segment or BSS[3] Section of memory and 
+	can retain it’s value between calls to the same function. In this way it is similar to a global variable, except it is only used in one function. The restriction on the scope of static variables is a 
+	compiler implemented restriction; being that, an assembly language program could easily access any data stored in either the data segment or BSS section of memory.
+	
+pointers vs variables
+	-normal variables store the value assigned to it while pointers store the address of the variable
+	-This will mean that the content of the pointer will always be a whole number, since it is a address
+	-c pointers are init to null and the value of a null pointer is zero
+	-& symbol is used to get the address of the variable.
+	-* symbol is used to get the value of the variable that the pointer is pointing to.
+	-If a pointer in C is assigned to NULL, it means it is pointing to nothing.
+	-Two pointers can be subtracted to know how many elements are available between these two pointers.
+	-But, Pointer addition, multiplication, division are not allowed.
+	-The size of any pointer is 2 byte (for 16 bit compiler).
+
+malloc()
+	The name malloc stands for "memory allocation".
+	The function malloc() reserves a block of memory of specified size and return a pointer of type void which can be casted into pointer of any form.
+
+	The syntax is: ptr = (cast type*) malloc(byte-size);
+
+	Here, ptr is pointer of cast-type. The malloc() function returns a pointer to an area of memory with size of byte size. If the space is insufficient, allocation fails and returns NULL pointer.
+
+	ptr = (int*) malloc(100 * sizeof(int));
+	This statement will allocate either 200 or 400 according to size of int 2 or 4 bytes respectively and the pointer points to the address of first byte of memory.
+
+	To allocate block of memory dynamically, sizeof is greatly used in dynamic memory allocation. For example, if we want to allocate memory for which is sufficient to hold 10 integers and we don’t know 
+	the sizeof(int) in that particular machine. We can allocate with the help of sizeof.
+
+calloc()
+	calloc stands for contiguous allocation
+	The difference between calloc and malloc is that malloc returns a pointer to a single block of memory whereas calloc returns a pointer to multiple blocks of memory each of the same size and sets
+	all bytes to zero.
+	
+	The syntax for calloc is: ptr = (cast type*) calloc(n, element size);
+
+	This statement will allocate contiguous space in memory for an array of n elements. For example:
+
+	ptr = (float*) calloc(25, sizeof(float));
+	This statement allocates contiguous space in memory for an array of 25 elements each of size of float, i.e, 4 bytes.
+
+free()
+	dynamically allocated space using malloc() or calloc() does not get released until we specify with free().
+	
+	syntax of free(): free(ptr);
+	This statement frees the space allocated in the memory pointed by ptr.
+
+
+
+
+
+
+
