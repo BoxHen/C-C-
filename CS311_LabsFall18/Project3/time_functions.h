@@ -141,7 +141,7 @@ int get_nanodiff()
 	}
 	diff = result.tv_sec * 10 ^ 9 + result.tv_nsec; // add the seconds to the nanoseconds
 	// seconds should be zero for fast programs
-	return int(diff);
+	return (int)(diff);
 }
 #endif
 
@@ -196,7 +196,7 @@ double get_CPU_time_diff()
 	//diff = (cs350_timer__CPU_end - cs350_timer__CPU_start);
 	//printf("Linux cputime diff=%10.3f, diff/1k=%10.3f \n",diff, diff/1000);
 	//return diff / 1000;
-	return cs350_timer_CPU_diff; // previously computed in "get_nanodiff"
+	return cs350_timer__CPU_diff; // previously computed in "get_nanodiff"
 }
 #else
 // ------------------- Windows -------------------
@@ -304,4 +304,3 @@ char folder338_out[] = "338-out";
 char folder360_in[] = "360-in";
 char folder360_out[] = "360-out";
 */
-
