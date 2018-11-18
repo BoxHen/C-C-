@@ -5,13 +5,15 @@
 #include <string>
 #include <semaphore.h>
 #include <pthread.h>
+#include "sched.h"
 
-#include "setpath_defs.h"
 #include "time_functions.h"
 #include "turbine_defines.h"
 
 #define HAVE_STRUCT_TIMESPEC //needed because pthread.h and some windows headers disagree on who owns the timespec struct.
 #define turbineNumber COLCOUNT*ROWCOUNT
+//#include "turbine_setpath_fn.h"
+#include "setpath_defs.h"
 using namespace std;
 /*============================================================Global=====================================================================*/
 typedef struct turbinePos{
@@ -38,12 +40,13 @@ void *generator(void* arg);
 
 /*============================================================Main=========================================================================*/
 int main(){
+	setpath();
     /*open file and get rid of text - prepare for parsing of initial conditions*/
     ifstream inFile;
-    inFile.open("turbine_setup.txt", ios::in);
-	ofstream outFile;
-	outFile.open("p3-out.txt", ios::out | std::fstream::app); //std::fstream::app appends to file
-    if(!inFile | !outFile){ // checks for errors in opening the file
+    inFile.open(in_path, ios::in);// "turbine_setup.txt"
+	ofstream outFile; // "p3-out.txt"
+	outFile.open(out_path, ios::out | std::fstream::app); //std::fstream::app appends to file
+	if(!inFile | !outFile){ // checks for errors in opening the file
         cout << "error in opening the turbine setup file" << endl; exit(1);
     }
     string line;
@@ -127,7 +130,6 @@ int main(){
 	}
 	return 0;
 }//end of main
-#include "setpath_fn.h"
 
 /*==========================================================Functions======================================================================*/
 void *generator(void* arg){ //thread function 
@@ -177,6 +179,8 @@ void *generator(void* arg){ //thread function
 				currPower[row][col] = 0; //If average is < 0, set it to 0
 			else
 				currPower[row][col] = prevPower[row][col] - (currPower[row][col] * 0.3); //decrease your output by 30% of current value
+		}else if (average == cycle_target_values){
+				currPower[row][col] = prevPower[row][col]; //if the computed average is = current demand, your new output will be the same as your last value.
 		}else{
 			currPower[row][col] = prevPower[row][col]; // covers edge case
 		}
@@ -185,3 +189,4 @@ void *generator(void* arg){ //thread function
     pthread_exit(NULL);
 	return NULL;
 }
+#include "turbine_setpath_fn.h"

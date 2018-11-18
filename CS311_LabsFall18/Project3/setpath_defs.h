@@ -5,10 +5,16 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <pwd.h>
+char in_path[200];
+char out_path[200];
+#endif
+#ifdef _WIN32  //Windows
+       char in_path[]="C:\\temp\\coursein\\turbine_setup.txt";
+       char out_path[]="C:\\temp\\courseout\\p3-out.txt";  // change to "x:fileio\\courseout\\p1-out.txt" where x is the drive to use if you have one
 #endif
 void setpath();
 
-// These 2 lines belong BEFORE “main”, so the names are global
+// These 2 lines belong BEFORE “main”, so the names will be global
        FILE* infile;
        FILE* outfile;
  
